@@ -20,4 +20,8 @@ export class ItemsService {
             quantity: 300,
         },
     ];
+
+    findAll(): Item[] {
+        return this.items;
+    }
 }
