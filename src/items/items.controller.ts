@@ -1,5 +1,5 @@
-import { Controller, Get, Post, Put, Delete } from '@nestjs/common';
-import { create } from 'domain';
+import { Controller, Get, Post, Put, Delete, Body } from '@nestjs/common';
+import { CreateItemDto } from './dto/create-item.dto';
 
 @Controller('items')
 export class ItemsController {
@@ -8,8 +8,8 @@ export class ItemsController {
         return 'Get all items';
     }
 
-    @Get()
-    create(): string {
-        return 'Create item';
+    @Post()
+    create(@Body() createItemDto: CreateItemDto): string {
+        return `Name: ${createItemDto.name} Description: ${createItemDto.description} Quantity: ${createItemDto.quantity}`; 
     }
 }
