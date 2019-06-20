@@ -37,7 +37,7 @@ export default {
     mongoURI: '<YourMongoDBCloudAtlasConnectionStringHere>'
 }
 ```
-This file can be also used to store other sensitive configuration data.
+This file can be also used to store other sensitive configuration data. Just remember to add the `/src/config` to your `.gitignore` -file if you're using Git.
 
 ---
 
